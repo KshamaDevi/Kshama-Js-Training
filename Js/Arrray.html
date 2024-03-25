@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h2>Array Push</h2>
+
+        <div id="arrOp"></div>
+        <script>
+            let result = "";
+            let arr = ["Sindhu","Seva","Sinchana","Teena","Kelvin"];
+            add="Dhanya";
+            function arraypush(arr,add)
+            {
+             arr[arr.length]="Dhanya";
+             return arr;
+             //return arr.length;
+           }
+          console.log(arr);
+          console.log(arr.length);
+          result += "Array Before Adding: " + arr + "<br>";
+            result+="Array after adding: " + arraypush(arr,"Dhanya") + "<br>";
+            result+="Length of current array: " +arr.length;
+            document.getElementById('arrOp').innerHTML = result;
+        </script>
+    </div>
+</body>
+</html>

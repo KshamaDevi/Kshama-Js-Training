@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h2>JS Array Functiosn/Methods</h2>
+
+        <div id="shift"></div>
+        <script>
+            let result = "";
+            let arr = ["Sindhu","Seva","Sinchana","Teena","Kelvin"];
+            let arr1=[];
+            result += "Array before shifting: " + arr + "<br>";
+            result += "Array Length before shifting : " + arr.length + "<br>";
+            function arrshift(arr)
+            {
+                for(let idx=0;idx<arr.length-1;idx++)
+                {
+             arr1[idx]=arr[idx+1]   
+                }
+                return arr1;
+            }
+            result+= "array after shifting: " +arrshift(arr)+"<br>";
+            result +="length of the new array: "+ arr1.length;
+            document.getElementById('shift').innerHTML = result;
+        </script>
+    </div>
+</body>
+</html>

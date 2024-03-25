@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Number Range Printer</title>
+</head>
+<body>
+
+  <div class="container mt-5">
+    <h2>Enter a Number Range</h2>
+
+    <!-- Form to get input from the user -->
+    <form id="rangeForm">
+      <label for="start">Start:</label>
+      <input type="number" id="start" name="start" required>
+
+      <label for="end">End:</label>
+      <input type="number" id="end" name="end" required>
+
+      <button type="button" onclick="printNumberRange()">Print Range</button>
+    </form>
+
+    <!-- Display the result here -->
+    <div id="result"></div>
+  </div>
+
+  <script>
+    // JavaScript function to handle input and print the number range
+    function printNumberRange() {
+      // Get user input
+      var startValue = parseInt(document.getElementById("start").value);
+      var endValue = parseInt(document.getElementById("end").value);
+
+      // Validate input
+      if (!isNaN(startValue) && !isNaN(endValue) && startValue <= endValue) {
+        // Generate and print the number range
+        var result = "Number Range: ";
+        for (var i = startValue; i <= endValue; i++) {
+          result += i + " ";
+        }
+        document.getElementById("result").innerText = result;
+      } else {
+        // Display an error message if input is invalid
+        document.getElementById("result").innerText = "Invalid input. Please enter a valid number range.";
+      }
+    }
+  </script>
+  </div>
+<div class="container mt-5">
+  <br>
+  <button type="button" onclick="calculateSum()">Print Sum</button>
+        <!-- Display the result here -->
+    <div id="result"></div>
+  </div> 
+
+  <script>
+    // JavaScript function to handle input and calculate the sum
+    function calculateSum() {
+      // Get user input
+      var startValue = parseInt(document.getElementById("start").value);
+      var endValue = parseInt(document.getElementById("end").value);
+      // Validate input
+      if (!isNaN(startValue) && !isNaN(endValue) && startValue <= endValue) {
+        // Calculate the sum of the number range
+        var sum = 0;
+        for (var i = startValue; i <= endValue; i++) {
+          sum += i;
+        }
+
+        // Display the result
+        document.getElementById("result").innerText = "Sum of the number range: " + sum;
+      } else {
+        // Display an error message if input is invalid
+        document.getElementById("result").innerText = "Invalid input. Please enter a valid number range.";
+      }
+    }
+  </script>
+  
+
+<div class=" container mt-5">
+  <br>
+  <button type="button" onclick="calculateAverage()">Calculate Average</button>
+</form>
+
+<!-- Display the result here -->
+<div id="result"></div>
+</div>
+
+<script>
+// JavaScript function to handle input and calculate the average
+function calculateAverage() {
+  // Get user input
+  var startValue = parseInt(document.getElementById("start").value);
+  var endValue = parseInt(document.getElementById("end").value);
+
+  // Validate input
+  if (!isNaN(startValue) && !isNaN(endValue) && startValue <= endValue) {
+    // Calculate the average of the number range
+    var sum = 0;
+    var count = 0;
+    for (var i = startValue; i <= endValue; i++) {
+      sum += i;
+      count++;
+    }
+
+    var average = sum / count;
+    document.getElementById("result").innerText = "Average of the number range: " + average.toFixed(2);
+  } else {
+    
+    document.getElementById("result").innerText = "Invalid input. Please enter a valid number range.";
+  }
+}
+</script>
+
+
+
+</body>
+</html>

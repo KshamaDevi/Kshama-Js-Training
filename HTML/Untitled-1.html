@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Traffic Signal management</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="road horizontal1"></div>
+        <div class="road vertical1"></div>
+        <div class="road horizontal2"></div>
+        <div class="road vertical2"></div>
+        <div class="road horizontal3"></div>
+        <div class="road vertical3"></div>
+        <div class="road horizontal4"></div>
+        <div class="road vertical4"></div>
+      </div>
+      <style>
+      .road {
+        position: absolute;
+        background-color: gray;
+      }
+      
+      .horizontal1 {
+        width: 100px;
+        height: 70px;
+        top: 20%;
+        transform: translateY(-50%);
+      }
+      
+      .vertical1 {
+        height: 100px;
+        width: 50px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      .horizontal2 {
+        width: 100px;
+        height: 70px;
+        top: 35%;
+        transform: translateY(-50%);
+      }
+      
+      .vertical2 {
+        height: 10px;
+        width: 50px;
+        left: 80%;
+        transform: translateX(-50%);
+      }
+      .horizontal3 {
+        width: 100px;
+        height: 70px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      
+      .vertical3 {
+        height: 50px;
+        width: 50px;
+        left: 80%;
+        transform: translateX(-50%);
+      }
+      .horizontal4 {
+        width: 100px;
+        height: 70px;
+        top: 65%;
+        left:50%;
+        transform: translateY(-50%);
+      }
+      
+      .vertical4 {
+        height: 50px;
+        width: 50px;
+        left: 80%;
+        transform: translateX(-50%);
+      }
+    </style>  
+      <div class="col"><button type="button" class="btn btn-danger" id="north" onclick="traffic('North')">north</button></div>
+            <div class="col"><button type="button" class="btn btn-danger" id="south" onclick="traffic('South')">south</button></div>
+            <div class="col"><button type="button" class="btn btn-danger" id="east" onclick="traffic('East')">east</button></div>
+            <div class="col"><button type="button" class="btn btn-danger" id="west" onclick="traffic('West')">west</button></div>
+            <script>
+              var isnorth = false;
+              var issouth = false;
+              var iseast = false;
+              var iswest = false;
+              function traffic(item)
+              {
+                let north = document.getElementById('north');
+                    let south = document.getElementById('south');
+                    let light = document.getElementById('east');
+                    let tv = document.getElementById('west');
+                    if(item==)
+              }
+              </script>
+   </div>
+                
+</body>
+</html>

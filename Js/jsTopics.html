@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Topics</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+</head>
+<body onload="showMsg('Load Event')">
+    <div class="container mt-4">
+        <div class="row">
+            <h2>Variable & Hoisting</h2>
+            <script>
+                //Variable Keywords
+                let firstName = "Veeramani";
+                var age = 21;
+                let isMajor = true;
+                const AADHAR = 374185239658;
+
+                //PreDefined Objects
+                // console, document, window
+                console.log(firstName);
+                console.log(age);
+                console.log(isMajor);
+                console.log(AADHAR);
+
+                firstName = "Dhanasekar";
+                age = 16;
+                isMajor = false;
+                //AADHAR = 852396327412;
+
+                console.log(firstName);
+                console.log(age);
+                console.log(isMajor);
+                console.log(AADHAR);
+
+                //Var - Global Scope / Let - local scope
+
+                console.log(num1);
+                //console.log(num2);
+
+                var num1 = 10;
+                let num2 = 20;
+
+                console.log(num1);
+                console.log(num2);
+            </script>
+        </div>
+        <div class="row mt-4">
+            <h2>Functions</h2>
+            function add(num1, num2){
+                console.log(num1+num2);
+            }
+            <script>
+
+                function add(num1, num2){
+                    console.log(num1+num2);
+                }
+
+                function sub(num1, num2){
+                    return num1-num2;
+                }
+
+                function displayHello(){
+                    console.log("Vanakam da mapla...");
+                }
+
+                function getHelloMsg(){
+                    return "Hello Hello";
+                }
+
+
+                function sum(num1, num2, num3){
+                    return num1 + num2 + num3;
+                }
+
+                function findAvg(num1, num2, num3, count){
+                    let sumVal = sum(num1, num2, num3);
+                    console.log(sumVal/count);
+                }
+
+                function findAvg2(sum, count){
+                    console.log(sum/count);
+                }
+
+                console.log(add(50,60));
+                console.log(sub(60,10));
+                displayHello();
+                let result = getHelloMsg();
+                console.log(result);
+
+                findAvg(10,20,30,3);
+                findAvg2(sum(100,200,300),3);
+            </script>
+        </div>
+        <div class="row mt-4">
+            <h2>Events</h2>
+            <div class="col">
+                <button type="button" class="btn btn-success" onclick="showMsg('Click Event')">Thattitu po..</button>
+            </div>
+            <div class="col">
+                <img onmouseout="showMsg('mouse Out')" src="../aserts/image/debby-hudson-MC4KXNpeeD4-unsplash.jpg" width="200px" height="200px"/>
+            </div>
+            <div class="col">
+                <input type="text" class="form-control" onkeypress="showMsg('key down')"/>
+            </div>
+            <div class="col">
+                <select onchange="showMsg('change event')">
+                    <option>--Select--</option>
+                    <option>TN</option>
+                    <option>KL</option>
+                    <option>KA</option>
+                    <option>AP</option>
+                </select>
+            </div>
+            <script>
+                function showMsg(msg){
+                    console.log(msg);
+                    //alert("Load Event");
+                    console.log(document);
+                }
+            </script>
+        </div>
+        <div class="row mt-4">
+            <h2>DOM</h2>
+            <div class="row mt-3">
+                <div class="col">FirstName</div>
+                <div class="col"><input type="text" id="fName" name="fName" class="form-control" onkeyup="displayFName()"/></div>
+                <div class="col"><button type="button" class="btn btn-primary" onclick="displayFName()">Display Name</button></div>
+            </div>
+            <div class="row mt-3">
+                <div class="col">State</div>
+                <div class="col">
+                    <select id="state" onchange="displayState()">
+                        <option>--Select--</option>
+                        <option>TN</option>
+                        <option>KL</option>
+                        <option>AP</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col">Gender</div>
+                <div class="col">
+                    <input type="radio" id="gMale" name="gender" value="Male"/>Male
+                    <input type="radio" id="gFemale" name="gender" value="Female"/>Female
+                    <input type="radio" id="gOther" name="gender" value="Others"/>Others
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col"><button type="button" class="btn btn-success" onclick="getInputs()">Submit</button>
+            </div>
+            <script>
+                function getInputs(){
+                    let fName = document.getElementById('fName').value;
+                    let selectedState = document.getElementById('state').value
+                    let gender = document.getElementsByName('gender');
+                    let genderMale = document.getElementById('gMale').checked;
+                    let genderFemale = document.getElementById('gFemale').checked;
+                    console.log(fName, selectedState, genderMale,genderFemale, gender);
+                }
+                function displayState(){
+                    let selectedState = document.getElementById('state').value;
+                    console.log(selectedState);
+                }
+                function displayFName(){
+                    let fName = document.getElementById('fName').value;
+                    console.log(fName);
+                }
+            </script>
+        </div>
+    </div>
+</body>
+</html>

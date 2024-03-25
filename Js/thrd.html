@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loops Example3</title>
+</head>
+<body>
+    <div class="container">
+    <h2>adding Numbers</h2>
+    <!--Input form-->
+    <form id="inputform">
+        <label for="start">startnumber : </label>
+        <input type="number" id="startnum" name="startnum" class="form-control" required /></div>
+        
+        <label for="end">end : </label>
+        <input type="number" id="endnum" name="endnum" class="form-control" required /></div>
+
+        <button type="button" class="btn btn-primary" onclick="addNumbers()">Print</button>
+    </form>
+
+    <div id="result"></div>
+    <!--function-->
+    <script>
+           function addNumbers()
+            {
+                let start=Number(document.getElementById('startnum').value);
+                let end=Number(document.getElementById('endnum').value);
+                let result="";
+                for(let num=start; num<=end; num++)
+                {
+                    if((num%2)==0)
+                    {
+                        result+= num+2 +"<br>";
+                    }
+                    else
+                    {
+                        result+= num+1 +"<br>";
+                    }
+                }
+                document.getElementById('result').innerHTML = result;
+            }
+    </script>
+    </div>
+     </body>
+     </html>

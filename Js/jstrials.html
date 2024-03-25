@@ -1,0 +1,47 @@
+<div class="container">
+    <div class="row m-4">
+        <h2>Multiplication Table</h2>
+        <div class="col"><input type="text" id="tableNum" name="tableNum" class="form-control" onkeyup="printMulTable()"/></div>
+        <div class="col"><p id="mulTableOp"></p></div>
+
+        <script>
+            function printMulTable(){
+                let mulNum = Number(document.getElementById('tableNum').value);
+                let result = "";
+                for(let num=1; num <=10; num++){
+                    result += mulNum + " * " + num + " = " + (mulNum*num) + "<br>";
+                }
+                document.getElementById('mulTableOp').innerHTML = result
+            }
+
+            // 5 * 1 = 5
+            //5 * 2 = 10
+        </script>
+    </div>
+    <div class="row m-4">
+        <h2>Odd / Evevn in Num Range</h2>
+        <div class="col"><input type="text" id="oddEvenSt" name="oddEvenSt" class="form-control"/></div>
+        <div class="col"><input type="text" id="oddEvenEd" name="oddEvenEd" class="form-control"/></div>
+        <div class="col"><button type="button" class="btn btn-primary" onclick="getOddEvenInNumRange()">Find Odd / Even in Range</button></div>
+        <div class="col"><p id="mulTableOp"></p></div>
+
+        <script>
+            function getOddEvenInNumRange(){
+                let oddEvenSt = Number(document.getElementById('oddEvenSt').value);
+                let oddEvenEd = Number(document.getElementById('oddEvenEd').value);
+                let result = "";
+                for(let num=oddEvenSt; num <=oddEvenEd; num++){
+                        let op = "";
+                        if((num%2) == 0){
+                            op = "Even";
+                        }else{
+                            op = "Odd";
+                        }
+                        console.log(num + " : " + op);
+                    }
+                }
+
+                // 5 * 1 = 5
+                //5 * 2 = 10
+            </script>
+        </div>

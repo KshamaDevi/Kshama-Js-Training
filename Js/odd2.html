@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="row m-4">
+        <h2>odd finder</h2>
+        <div class="col"><input type="text" id="startNum" name="startNum" class="form-control" /></div>
+        <div class="col"><input type="text" id="endnum" name="endnum" class="form-control" /></div>
+        <div class="col"><button type="button" class="btn btn-primary" onclick="getOddInRange()">Find Odd in Range</button></div>
+        <div class="col"><p id="oddfinder"></p></div>
+
+        <script>
+            function getOddInRange()
+            {
+                let start=Number(document.getElementById('startNum').value);
+                let end=Number(document.getElementById('endnum').value);
+               
+                for(let num=start; num<=end; num++)
+                {
+                   document.getElementById('oddfinder').innerHTML = num
+                }
+            }
+</script>
+</div>

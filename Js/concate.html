@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <h2>Array concat</h2>
+        <div id="arrayconcat"></div>
+        <script>
+            let result = "";
+            let arr = ["Sindhu", "Seva", "Sinchana", "Teena", "Kelvin"];
+            let arr2=["Dhanush","Elica","Heera","Gopal"];
+            let len=(arr.length)+(arr2.length);
+            result += "Array1 before concatination : " + arr + "<br>";
+            function arrconcat(arr,arr2) 
+            {
+                for(let idx=0; idx<arr2.length-1;idx++)
+                {
+                   for(let id=arr.length; id<len; id++)
+                   {
+                      arr[id]=arr2[idx];
+                      idx++;
+                   }
+                }
+                return arr;
+            }
+            result += "array1 after concatinating"+arrconcat(arr,arr2);
+            document.getElementById('arrayconcat').innerHTML = result;
+        </script>
+    </div>
+</body>
+
+</html>

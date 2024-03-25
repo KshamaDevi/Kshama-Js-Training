@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OOPs</title>
+</head>
+<body>
+    <div>
+        <h2>OOPs Example</h2>
+        <script>
+            class Appointment{
+                slNo=0;
+                patientName="";
+                timeSlot="";
+                fees=0;
+
+                registerPatient(){
+                    console.log("Registering the Patient");
+                    console.log(this.slNo + " " + this.patientName + " " + this.timeSlot);
+                }
+                consultDoctor(){
+                    console.log(this.patientName + " Consulting the Doctor");
+                
+                }
+                getMedicines(){
+                    console.log(this.patientName + this.fees +" Purchasing the Medicines");
+                }
+            }
+
+            let app1 = new Appointment();
+            let app2 = new Appointment();
+            app1.slNo = 1;
+            app1.patientName = "Prakash";
+            app1.timeSlot = "11AM";
+            app2.slNo = 2;
+            app2.patientName = "Yukesh Kumar";
+            app2.timeSlot = "11:10AM";
+            app1.registerPatient();
+            app2.registerPatient();
+            app2.fees = 600;
+            app2.consultDoctor();
+            app1.consultDoctor();
+            app1.getMedicines();
+            app2.getMedicines();
+
+
+            class Product{
+                prodName="";
+                prodWeight =0;
+
+                getProductDetails(){
+                    console.log(this.prodName  + "  " + this.prodWeight);
+                }
+
+                constructor(name, wght){
+                    this.prodName = name;
+                    this.prodWeight = wght;
+                }
+            }
+
+            let pr1 = new Product("Table", 50);
+            pr1.getProductDetails();
+            //pr1.handleWithCare();
+            class GlassProduct extends Product
+            {
+                isPackedSafe = false;
+
+                handleWithCare(){
+                    console.log(this.prodName + " Is Handled with Care");
+                }
+
+                printDetails(){
+                    console.log(prodName);
+                    // try{
+                    //     console.log(this.prodName);
+                    // }catch(ex){
+                    //     console.log(ex);
+                    // }
+                }
+            }
+
+            let glsPr = new GlassProduct("Table", 100);
+            glsPr.handleWithCare();
+            try{
+          
+                glsPr.printDetails();                
+                glsPr.getProductDetails();
+            }catch(ex){
+                console.log("Exception Occurred..Terminating Program..Aprm va...");
+            }
+            console.log("After Excepion");
+        </script>
+    </div>
+</body>
+</html>

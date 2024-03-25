@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <h2>Array includes</h2>
+        <div id="arrOp"></div>
+        <script>
+            let result = "";
+            let arr = ["Sindhu", "Seva", "Sinchana", "Teena", "Kelvin"];
+            result += "Array : " + arr + "<br>";
+            let search="Sinchana";
+            function arrincludes(arr,search) 
+            {
+                for(let idx=0; idx<arr.length;idx++)
+                {
+                    if(arr[idx]==search)
+                    {
+                       // return arr[idx];
+                       return true;
+                        break;
+                    }
+                }
+                return false;
+            }
+            result += arrincludes(arr,search);
+            document.getElementById('arrOp').innerHTML = result;
+        </script>
+    </div>
+</body>
+
+</html>

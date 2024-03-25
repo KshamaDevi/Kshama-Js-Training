@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h2>Array Unshift</h2>
+
+        <div id="unshift"></div>
+        <script>
+            let result = "";
+            let arr = ["Sindhu","Seva","Sinchana","Teena","Kelvin"];
+            result += "Array before adding: " + arr + "<br>";
+            add="Dhanya";
+            function arrunshift(arr,add)
+            {
+              let arr1=[add];
+              for(let idx=0;idx<arr.length;idx++)
+              {
+                arr1[idx+1]=arr[idx];
+                //console.log(arr1);
+              }
+             return arr1.length;
+            }
+           // console.log(arrunshift(arr,"shan"));
+            result += "Array before adding: " + arr + "<br>";
+            result += "Array after adding : " + arr1 + "<br>";
+            result+="Length of the new array:" +arrunshift(arr,add);
+            document.getElementById('unshift').innerHTML = result;
+        </script>
+    </div>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <h2>Array pop</h2>
+        <div id="popping"></div>
+        <script>
+            let result = "";
+            let arr = ["Sindhu", "Seva", "Sinchana", "Teena", "Kelvin"];
+            result += "Array before removing: " + arr + "<br>";
+            let arr1=[];
+            function arrpop(arr) 
+            {
+                for(let idx=0; idx<arr.length-1;arr++)
+                {
+                 arr1[idx]=arr[idx];
+                }
+               return arr[arr.length-1];
+            }
+            result += "Array after removing: " + arr1 + "<br>";
+            result += "popped element: "+ arrpop(arr)+"<br>";
+            document.getElementById('popping').innerHTML = result;
+        </script>
+    </div>
+</body>
+
+</html>

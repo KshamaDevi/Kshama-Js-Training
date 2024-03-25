@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="row m-4">
+            <h2> Sort</h2>
+            <div class="row container mt-4"></div>
+            <div class="col container mt-4">Number1</div>
+            <div class="col container mt-4"><input type="text" class="form-control" id="num1" name="num1" /></div>
+            <div class="col container mt-4">Number2</div>
+            <div class="col container mt-4"><input type="text" class="form-control" id="num2" name="num2" /></div>
+            <div class="col container mt-4">Number3</div>
+            <div class="col container mt-4"><input type="text" class="form-control" id="num3" name="num3" /></div>
+            <div class="col container mt-4"><button type="print" class="btn btn-success"
+                    onclick="sort()">Sort</button>
+            </div>
+            <div class="col container mt-4"></div>
+            <p id="result"></p>
+    
+            <script>
+                function sort() {
+                    let numb1 = Number(document.getElementById("num1").value);
+                    let numb2 = Number(document.getElementById("num2").value);
+                    let numb3 = Number(document.getElementById("num3").value);
+                    let res="";
+                    if((numb1>numb2)&&(numb1>numb3)){
+                            if(numb2<numb3)
+                            {
+                                res+=(numb1 +" "+numb2 + " "+numb3);
+                            }
+                            else{
+                                res+=(numb1 +" "+numb3 + " "+numb2);
+                            }
+                    }
+                    else if((numb1<numb2)&&(numb2>numb3))
+                    {
+                        if(numb1<numb3)
+                        {
+                            res+=(numb1 +" "+numb3 + " "+numb2);
+                        }
+                        else
+                        {
+                            res+=(numb3 +" "+numb1 + " "+numb2);
+                        }
+                    }
+                    else if((numb1<numb2)&&(numb2<numb3))
+                    {
+                        if(numb1<numb2)
+                        {
+                            res+=(numb1 +" "+numb2 + " "+numb3);
+                        }
+                        else{
+                            res+=(numb2 +" "+numb1 + " "+numb3);
+                        }
+                    }
+                  document.getElementById("result").innerHTML = res;
+                }
+            </script>
+        </div>
+    </div>
+</body>
+</html>

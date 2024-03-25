@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loops Example1- elimination</title>
+</head>
+
+<body>
+    <div class="container">
+        <h2>print Numbers</h2>
+        <!--Input form-->
+        <form id="inputform">
+            <label for="start">startnumber : </label>
+            <input type="number" id="startnum" name="startnum" class="form-control" required />
+
+    <label for="end">end : </label>
+    <input type="number" id="endnum" name="endnum" class="form-control" required /></div>
+
+    <label>eliminate : </label>
+    <input type="number" id="eliminate" name="eliminate" class="form-control" required /></div>
+
+
+    <button type="button" class="btn btn-primary" onclick="print()">Print</button>
+    </form>
+
+    <div id="result"></div>
+    <!--function-->
+    <script>
+        function print() {
+            let start = Number(document.getElementById('startnum').value);
+            let end = Number(document.getElementById('endnum').value);
+            let eliminate = Number(document.getElementById('eliminate').value);
+            let result = "";
+            for (let i = start; i <= end; i++) {
+                if (i != eliminate) {
+                    result += i + "<br>";
+                }
+
+            }
+            document.getElementById('result').innerHTML = result;
+        }
+    </script>
+    </div>
+</body>
+
+</html>

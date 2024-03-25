@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loops Example5</title>
+</head>
+<body>
+    <div class="container">
+    <h2>Reverse Number</h2>
+    <!--Input form-->
+    <form id="inputform">
+        <label for="number">Enter the number : </label>
+        <input type="number" id="num" name="num" class="form-control" required /></div>
+
+        <button type="button" class="btn btn-primary" onclick="reverseNumber()">Reverse</button>
+    </form>
+
+    <div id="result"></div>
+    <!--function-->
+    <script>
+           function reverseNumber()
+            {
+                let numb=Number(document.getElementById('num').value);
+                let result="";
+                let length = Math.log(numb) * Math.LOG10E + 1 | 0;
+                let rev=0;
+                let last=0;
+                    for(let i=numb; i<=length; i++)
+                    {
+                        last=numb%10;
+                        rev=rev*10+last;
+                        numb=math.floor(numb/10);
+                    }
+                    document.getElementById('result').innerHTML = rev;
+                }
+    </script>
+    </div>
+     </body>
+     </html>
